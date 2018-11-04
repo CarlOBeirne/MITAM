@@ -57,7 +57,7 @@ input[type=submit]:hover {
 <div>
   <form action="/action_page.php">
     <label for="Email">Your Email</label>
-      <asp:Label ID="LabelEmail" runat="server" Text="<%# Bind("Email") %>"></asp:Label>
+      <asp:Label ID="LabelEmail" runat="server" Text=></asp:Label>
       <br />
 
   
