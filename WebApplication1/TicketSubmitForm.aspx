@@ -3,37 +3,43 @@
     <div style="width:auto; height:auto;">
         <table class="nav-justified">
             <tr>
+                <td style="width: 426px">Your used id</td>
+                <td>
+                    <asp:Label ID="UserID" runat="server"></asp:Label>
+                </td>
+            </tr>
+            <tr>
                 <td style="width: 426px">Your username</td>
                 <td>
-                    <asp:Label ID="Username" runat="server"></asp:Label>
+                    <asp:Label ID="Email" runat="server"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td style="width: 426px; height: 22px">Title</td>
                 <td style="height: 22px">
-                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TicketTitle" runat="server"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td style="width: 426px">Details of the problem</td>
                 <td>
-                    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TicketDetails" runat="server"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td style="width: 426px; height: 22px">System affected</td>
                 <td style="height: 22px">
-                    <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SystemLevel" DataTextField="System" DataValueField="System">
+                    <asp:DropDownList ID="SystemID" runat="server" DataSourceID="SystemLevel" DataTextField="System" DataValueField="SystemID" Width="88px">
                     </asp:DropDownList>
-                    <asp:SqlDataSource ID="SystemLevel" runat="server" ConnectionString="<%$ ConnectionStrings:MITAMconnectionString %>" SelectCommand="SELECT [System] FROM [System]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SystemLevel" runat="server" ConnectionString="<%$ ConnectionStrings:MITAMconnectionString %>" SelectCommand="SELECT [System], [SystemID] FROM [System]"></asp:SqlDataSource>
                 </td>
             </tr>
             <tr>
                 <td style="width: 426px">Urgency level</td>
                 <td>
-                    <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="UrgencyLevel" DataTextField="UrgencyLevel" DataValueField="UrgencyLevel">
+                    <asp:DropDownList ID="UrgencyID" runat="server" DataSourceID="UrgencyLevel" DataTextField="UrgencyLevel" DataValueField="UrgencyID">
                     </asp:DropDownList>
-                    <asp:SqlDataSource ID="UrgencyLevel" runat="server" ConnectionString="<%$ ConnectionStrings:MITAMconnectionString %>" SelectCommand="SELECT [UrgencyLevel] FROM [Urgency]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="UrgencyLevel" runat="server" ConnectionString="<%$ ConnectionStrings:MITAMconnectionString %>" SelectCommand="SELECT [UrgencyLevel], [UrgencyID] FROM [Urgency]"></asp:SqlDataSource>
                 </td>
             </tr>
             <tr>

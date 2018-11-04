@@ -28,11 +28,15 @@ namespace WebApplication1
             {
                 //conn.Open();
                 string checkPasswordQuery = "select PasswordHash from Users where Email='" + Email.Text + "'";
+                string getUserID = "select UserID from Users where Email='" + Email.Text + "'";
                 SqlCommand passComm = new SqlCommand(checkPasswordQuery, conn);
+                SqlCommand userComm = new SqlCommand(getUserID, conn);
                 string password = passComm.ExecuteScalar().ToString().Replace(" ","");
+                string userGuid = userComm.ExecuteScalar().ToString();
                 if(password == PasswordHash.Text)
                 {
                     Session["New"] = Email.Text;
+                    Session["User"] = userGuid;
                     Response.Write("Password is correct");
                     Response.Redirect("TicketSubmitForm.aspx");
                 }

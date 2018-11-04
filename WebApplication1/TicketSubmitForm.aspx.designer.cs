@@ -13,40 +13,49 @@ namespace WebApplication1 {
     public partial class TicketSubmitForm {
         
         /// <summary>
-        /// Username control.
+        /// UserID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Username;
+        protected global::System.Web.UI.WebControls.Label UserID;
         
         /// <summary>
-        /// TextBox1 control.
+        /// Email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.Label Email;
         
         /// <summary>
-        /// TextBox2 control.
+        /// TicketTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox TicketTitle;
         
         /// <summary>
-        /// DropDownList1 control.
+        /// TicketDetails control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.TextBox TicketDetails;
+        
+        /// <summary>
+        /// SystemID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList SystemID;
         
         /// <summary>
         /// SystemLevel control.
@@ -58,13 +67,13 @@ namespace WebApplication1 {
         protected global::System.Web.UI.WebControls.SqlDataSource SystemLevel;
         
         /// <summary>
-        /// DropDownList2 control.
+        /// UrgencyID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
+        protected global::System.Web.UI.WebControls.DropDownList UrgencyID;
         
         /// <summary>
         /// UrgencyLevel control.
