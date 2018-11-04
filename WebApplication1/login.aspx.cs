@@ -34,7 +34,7 @@ namespace WebApplication1
                 {
                     Session["New"] = Email.Text;
                     Response.Write("Password is correct");
-                    Response.Redirect("users.aspx");
+                    Response.Redirect("UserLogged.aspx");
                 }
                 else
                 {

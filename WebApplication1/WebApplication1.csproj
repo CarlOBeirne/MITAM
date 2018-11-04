@@ -223,6 +223,7 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
     <Content Include="TicketView.aspx" />
+    <Content Include="UserLogged.aspx" />
     <Content Include="Users.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -400,6 +401,13 @@
     </Compile>
     <Compile Include="TicketView.aspx.designer.cs">
       <DependentUpon>TicketView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserLogged.aspx.cs">
+      <DependentUpon>UserLogged.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserLogged.aspx.designer.cs">
+      <DependentUpon>UserLogged.aspx</DependentUpon>
     </Compile>
     <Compile Include="Users.aspx.cs">
       <DependentUpon>Users.aspx</DependentUpon>
