@@ -170,6 +170,8 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="AssetForm.aspx" />
+    <Content Include="Assets.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -189,6 +191,8 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Account\Web.config" />
+    <Content Include="Images\support_tickets.png" />
+    <Content Include="Images\Users.png" />
     <Content Include="login.aspx" />
     <Content Include="Master.CSS" />
     <Content Include="registration.aspx" />
@@ -350,6 +354,20 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="AssetForm.aspx.cs">
+      <DependentUpon>AssetForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AssetForm.aspx.designer.cs">
+      <DependentUpon>AssetForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assets.aspx.cs">
+      <DependentUpon>Assets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assets.aspx.designer.cs">
+      <DependentUpon>Assets.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -443,7 +461,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="App_Themes\Theme1\" />
     <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>

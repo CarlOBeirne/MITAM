@@ -17,7 +17,45 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (HttpContext.Current.User.Identity.IsAuthenticated)
+            {
+                try
+                {
+                    string connstring = ConfigurationManager.ConnectionStrings["MITAMconnectionString"].ConnectionString; // https://stackoverflow.com/questions/22113751/how-to-create-a-connection-string-in-asp-net-c-sharp
 
+                    SqlConnection linkToDB = new SqlConnection(connstring);
+                    linkToDB.Open();
+                    string sqlText = @"SELECT [RoleID] FROM [Users] WHERE [RoleID] = @UserName";
+                    SqlCommand dataAction = new SqlCommand(sqlText, linkToDB);
+                    SqlParameter paramValue2 = new SqlParameter("@UserName", SqlDbType.VarChar);
+                    paramValue2.Value = Context.User.Identity.Name;
+                    dataAction.Parameters.Add(paramValue2);
+                    var who = dataAction.ExecuteScalar();
+
+
+
+                    string a = "Admin";
+                    if (a != who.ToString())
+                    {
+
+
+                        Response.Redirect("~/Users");
+                    }
+
+                }
+
+                catch
+                {
+
+                    Response.Redirect("~/default");
+
+                }
+
+
+            }
+
+            else
+                Response.Redirect("~/default");
         }
 
         void Get_Xml()
