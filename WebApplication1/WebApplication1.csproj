@@ -190,6 +190,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Account\Web.config" />
     <Content Include="login.aspx" />
+    <Content Include="Master.CSS" />
     <Content Include="registration.aspx" />
     <Content Include="TicketForm.aspx" />
     <None Include="Properties\PublishProfiles\MajorITAssetManagement - Web Deploy.pubxml" />
@@ -442,6 +443,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="App_Themes\Theme1\" />
     <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>

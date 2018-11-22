@@ -1,9 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="TicketSubmitForm.aspx.cs" Inherits="WebApplication1.TicketSubmitForm" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div style="width:auto; height:auto;">
+        <link rel="stylesheet" href="content/site.css" type="text/css" media="screen" />
         <table class="nav-justified">
+            <header> 
+                   <h1>Sumbit a Ticket</h1>
+            </header>
             <tr>
-                <td style="width: 426px">Your user id</td>
+                <td style="width: 42px">Your user id</td>
                 <td>
                     <asp:Label ID="UserID" runat="server"></asp:Label>
                 </td>
@@ -50,4 +54,5 @@
             </tr>
         </table>
     </div>
+
 </asp:Content>
