@@ -3,7 +3,7 @@
     <div style="width:auto; height:auto;">
         <table class="nav-justified">
             <tr>
-                <td style="width: 426px">Your used id</td>
+                <td style="width: 426px">Your user id</td>
                 <td>
                     <asp:Label ID="UserID" runat="server"></asp:Label>
                 </td>

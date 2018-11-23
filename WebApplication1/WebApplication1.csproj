@@ -191,6 +191,8 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Account\Web.config" />
+    <Content Include="Images\support_tickets.png" />
+    <Content Include="Images\Users.png" />
     <Content Include="login.aspx" />
     <Content Include="registration.aspx" />
     <Content Include="TicketForm.aspx" />
@@ -458,7 +460,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
