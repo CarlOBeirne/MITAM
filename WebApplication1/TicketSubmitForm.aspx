@@ -35,15 +35,15 @@
                 <td style="height: 22px">
                     <asp:DropDownList ID="SystemID" runat="server" DataSourceID="SystemLevel" DataTextField="System" DataValueField="SystemID" Width="88px">
                     </asp:DropDownList>
-                    <asp:SqlDataSource ID="SystemLevel" runat="server" ConnectionString="<%$ ConnectionStrings:MITAMconnectionString %>" SelectCommand="SELECT [System], [SystemID] FROM [System]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SystemLevel" runat="server" ConnectionString="<%$ ConnectionStrings:ProperConnection %>" SelectCommand="SELECT [System], [SystemID] FROM [System]"></asp:SqlDataSource>
                 </td>
             </tr>
             <tr>
-                <td style="width: 426px">Urgency level</td>
-                <td>
+                <td style="width: 426px; height: 45px;">Urgency level</td>
+                <td style="height: 45px">
                     <asp:DropDownList ID="UrgencyID" runat="server" DataSourceID="UrgencyLevel" DataTextField="UrgencyLevel" DataValueField="UrgencyID">
                     </asp:DropDownList>
-                    <asp:SqlDataSource ID="UrgencyLevel" runat="server" ConnectionString="<%$ ConnectionStrings:MITAMconnectionString %>" SelectCommand="SELECT [UrgencyLevel], [UrgencyID] FROM [Urgency]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="UrgencyLevel" runat="server" ConnectionString="<%$ ConnectionStrings:ProperConnection %>" SelectCommand="SELECT [UrgencyLevel], [UrgencyID] FROM [Urgency]"></asp:SqlDataSource>
                 </td>
             </tr>
             <tr>

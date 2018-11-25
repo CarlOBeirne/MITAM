@@ -18,11 +18,11 @@ namespace WebApplication1
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["MITAMconnectionString"].ConnectionString);
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ProperConnection"].ConnectionString);
             conn.Open();
             string insertQuery = "insert into Assets (AssetID, UserID, AssetTitle, AssetNotes, AssetPurchaseDate, AssetTypeID, AssetSN) values (@AssetID, @UserID, @AssetTitle, @AssetNotes, @PurchaseDate, @AssetType, @AssetSN)";
             SqlCommand com = new SqlCommand(insertQuery, conn);
-            com.Parameters.AddWithValue("@UserID", newGUID.ToString());
+           // com.Parameters.AddWithValue("@UserID", newGUID.ToString());
             com.Parameters.AddWithValue("@UserID", Session["User"].ToString());
             com.Parameters.AddWithValue("@AssetTitle", AssetTitle.Text);
             com.Parameters.AddWithValue("@AssetNotes", AssetNotes.Text);

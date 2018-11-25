@@ -13,7 +13,7 @@ namespace WebApplication1
         protected void Page_Load(object sender, EventArgs e)
         {
             
-                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["MITAMconnectionString"].ConnectionString);
+                //SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["MITAMconnectionString"].ConnectionString);
                 
          
             

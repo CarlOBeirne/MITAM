@@ -23,11 +23,11 @@ namespace WebApplication1
         }
         protected void SubmitTicket_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["MITAMconnectionString"].ConnectionString);
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ProperConnection"].ConnectionString);
             conn.Open();
             string insertQuery = "insert into Tickets (UserID,TicketTitle,TicketDetails,SystemID,UrgencyID) values (@UserID ,@TicketTitle , @TicketDetails , @SystemID , @UrgencyID)";
             SqlCommand com = new SqlCommand(insertQuery, conn);
-            com.Parameters.AddWithValue("@UserID", Session["User"].ToString());
+           com.Parameters.AddWithValue("@UserID", Session["User"].ToString());
             com.Parameters.AddWithValue("@TicketTitle", TicketTitle.Text);
             com.Parameters.AddWithValue("@TicketDetails", TicketDetails.Text);
             com.Parameters.AddWithValue("@SystemID", SystemID.Text);
