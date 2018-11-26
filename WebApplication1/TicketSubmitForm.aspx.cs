@@ -36,7 +36,7 @@ namespace WebApplication1
 
             com.ExecuteNonQuery();
 
-
+            Response.Redirect("TicketSubmitForm.aspx");
             conn.Close();
         }
     }
