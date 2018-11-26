@@ -19,7 +19,7 @@ namespace WebApplication1
 
         protected void Button_Login_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["MITAMconnectionString"].ConnectionString);
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ProperConnection"].ConnectionString);
             conn.Open();
             string checkuser = "select count(*) from Users where Email='" + Email.Text + "'";
             SqlCommand com = new SqlCommand(checkuser, conn);

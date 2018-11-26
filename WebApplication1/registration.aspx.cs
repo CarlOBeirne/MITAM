@@ -15,7 +15,7 @@ namespace WebApplication1
         {
             if(IsPostBack)
             {
-                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["MITAMconnectionString"].ConnectionString);
+                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ProperConnection"].ConnectionString);
                 conn.Open();
                 string checkuser = "select count(*) from Users where Email='" + Email.Text + "'";
                 SqlCommand com = new SqlCommand(checkuser, conn);
@@ -34,7 +34,7 @@ namespace WebApplication1
             {
                 Guid newGUID = Guid.NewGuid();
 
-                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["MITAMconnectionString"].ConnectionString);
+                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ProperConnection"].ConnectionString);
                 conn.Open();
                 string insertQuery = "insert into Users (UserID,FirstName,LastName,JobTitle,Email,PasswordHash,RoleID) values (@UserID ,@FirstName , @LastName , @JobTitle , @Email , @PasswordHash , @RoleID)";
                 SqlCommand com = new SqlCommand(insertQuery, conn);

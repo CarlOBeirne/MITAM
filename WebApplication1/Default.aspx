@@ -26,7 +26,7 @@
         </p>
     <div class="pie">
          
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:MITAMconnectionString %>" SelectCommand="SELECT AssetType.AssetType AS Expr1, COUNT(Assets.AssetTypeID) AS Expr2 FROM AssetType INNER JOIN Assets ON AssetType.AssetTypeID = Assets.AssetTypeID GROUP BY AssetType.AssetType"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ProperConnection %>" SelectCommand="SELECT AssetType.AssetType AS Expr1, COUNT(Assets.AssetTypeID) AS Expr2 FROM AssetType INNER JOIN Assets ON AssetType.AssetTypeID = Assets.AssetTypeID GROUP BY AssetType.AssetType"></asp:SqlDataSource>
         <asp:Chart ID="Chart1" runat="server" DataSourceID="SqlDataSource1" Width="410px">
             <Series>
                 <asp:Series BorderDashStyle="DashDotDot" Color="Pink" Name="Asset" XValueMember="Expr1" YValueMembers="Expr2" ChartType="StackedBar">

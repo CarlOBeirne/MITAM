@@ -21,7 +21,7 @@ namespace WebApplication1
             {
                 try
                 {
-                    string connstring = ConfigurationManager.ConnectionStrings["MITAMconnectionString"].ConnectionString; // https://stackoverflow.com/questions/22113751/how-to-create-a-connection-string-in-asp-net-c-sharp
+                    string connstring = ConfigurationManager.ConnectionStrings["ProperConnection"].ConnectionString; // https://stackoverflow.com/questions/22113751/how-to-create-a-connection-string-in-asp-net-c-sharp
 
                     SqlConnection linkToDB = new SqlConnection(connstring);
                     linkToDB.Open();
@@ -103,6 +103,16 @@ namespace WebApplication1
         protected void Button1_Click(object sender, EventArgs e)
         {
             Response.Redirect("registration.aspx");
+        }
+
+        protected void XmlGridView_SelectedIndexChanged1(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void XmlGridView_SelectedIndexChanged2(object sender, EventArgs e)
+        {
+
         }
     }
 }
