@@ -5,19 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-
 namespace WebApplication1
 {
-    public partial class _Default : Page
+    public partial class Assets : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-                //SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["MITAMconnectionString"].ConnectionString);
-                
-         
-            
+
         }
     }
-    
 }

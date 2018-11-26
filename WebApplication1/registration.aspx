@@ -62,11 +62,11 @@
         <tr>
             <td class="text-right" style="width: 203px">Role</td>
             <td class="text-left" style="width: 199px">
-                <asp:DropDownList ID="RoleID" runat="server" Width="180px" DataSourceID="ConnectionToRolesTable" DataTextField="Role" DataValueField="RoleID">
+                <asp:DropDownList ID="RoleID" runat="server" Width="180px" DataSourceID="ConnectionToRolesTable" DataTextField="RoleID" DataValueField="RoleID">
                     <asp:ListItem>Agent</asp:ListItem>
                     <asp:ListItem>Manager</asp:ListItem>
                 </asp:DropDownList>
-                <asp:SqlDataSource ID="ConnectionToRolesTable" runat="server" ConnectionString="<%$ ConnectionStrings:MITAMconnectionString %>" SelectCommand="SELECT * FROM [Roles]"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="ConnectionToRolesTable" runat="server" ConnectionString="<%$ ConnectionStrings:ProperConnection %>" SelectCommand="SELECT * FROM [Roles]"></asp:SqlDataSource>
             </td>
             <td>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="RoleID" ErrorMessage="Role required" ForeColor="Red"></asp:RequiredFieldValidator>
