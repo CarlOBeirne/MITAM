@@ -60,3 +60,16 @@ div.static {
     margin-left: 50%;
     
 }
+.tHead{
+    width: 100%;
+}
+.TicketHeader {
+    text-align: center;
+
+}
+
+
+/* Ticket View */
+.TicketViewHead {
+    text-align: center;
+}

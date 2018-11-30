@@ -1,11 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="TicketSubmitForm.aspx.cs" Inherits="WebApplication1.TicketSubmitForm" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div style="width:auto; height:auto;">
-        <link rel="stylesheet" href="content/site.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="content/Site.css" type="text/css" media="screen" />
         <table class="nav-justified">
-            <header> 
-                   <h1>Sumbit a Ticket</h1>
-            </header>
+         <tr class="tHead">
+            <th> 
+                <h1 class="TicketHeader">Sumbit a Ticket</h1>
+            </th>
+        </tr>
             <tr>
                 <td style="width: 42px">Your user id</td>
                 <td>
