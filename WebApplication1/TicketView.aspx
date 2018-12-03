@@ -4,7 +4,7 @@
 
     <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ticket View </h1>
 
-    &nbsp;<asp:SqlDataSource ID="MITAMConnection" runat="server" ConnectionString="<%$ ConnectionStrings:ProperConnection %>" SelectCommand="SELECT [TicketID], [TicketTitle], [TicketDetails], [SystemID], [UrgencyID], [AssetID], [UserID] FROM [Tickets]"></asp:SqlDataSource>
+    &nbsp;<asp:SqlDataSource ID="MITAMConnection" runat="server" ConnectionString="<%$ ConnectionStrings:ProperConnection %>" SelectCommand="SELECT [TicketID], [TicketTitle], [TicketDetails], [SystemID], [UrgencyID], [AssetID], [UserID], [TicketDate] FROM [Tickets]"></asp:SqlDataSource>
     
 <div class="userList" style="margin-left: 10%">
             <asp:GridView ID="XmlGridView" runat="server" style="margin-top:5%; width: 90%;" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" ShowFooter="True" DataSourceID="MITAMConnection" AutoGenerateColumns="False" AllowPaging="True" AllowSorting="True" >
@@ -12,13 +12,14 @@
               
 
                 <Columns>
-                    <asp:BoundField DataField="TicketID" HeaderText="TicketID" SortExpression="TicketID" />
+                    <asp:BoundField DataField="TicketID" HeaderText="TicketID" SortExpression="TicketID" InsertVisible="False" ReadOnly="True" />
                     <asp:BoundField DataField="TicketTitle" HeaderText="TicketTitle" SortExpression="TicketTitle" />
                     <asp:BoundField DataField="TicketDetails" HeaderText="TicketDetails" SortExpression="TicketDetails" />
                     <asp:BoundField DataField="SystemID" HeaderText="SystemID" SortExpression="SystemID" />
                     <asp:BoundField DataField="UrgencyID" HeaderText="UrgencyID" SortExpression="UrgencyID" />
                     <asp:BoundField DataField="AssetID" HeaderText="AssetID" SortExpression="AssetID" />
                     <asp:BoundField DataField="UserID" HeaderText="UserID" SortExpression="UserID" />
+                    <asp:BoundField DataField="TicketDate" HeaderText="TicketDate" SortExpression="TicketDate" />
                 </Columns>
               
 

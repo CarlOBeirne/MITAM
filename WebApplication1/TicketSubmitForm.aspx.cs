@@ -17,6 +17,7 @@ namespace WebApplication1
             {
                 Email.Text += Session["New"].ToString();
                 UserID.Text += Session["User"].ToString();
+                TicketDate.Text += Session["Date"].ToString();
             }
             else
                 Response.Redirect("login.aspx");
@@ -25,13 +26,14 @@ namespace WebApplication1
         {
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ProperConnection"].ConnectionString);
             conn.Open();
-            string insertQuery = "insert into Tickets (UserID,TicketTitle,TicketDetails,SystemID,UrgencyID) values (@UserID ,@TicketTitle , @TicketDetails , @SystemID , @UrgencyID)";
+            string insertQuery = "insert into Tickets (UserID,TicketTitle,TicketDetails,SystemID,UrgencyID,TicketDate) values (@UserID ,@TicketTitle , @TicketDetails , @SystemID , @UrgencyID , @TicketDate)";
             SqlCommand com = new SqlCommand(insertQuery, conn);
            com.Parameters.AddWithValue("@UserID", Session["User"].ToString());
             com.Parameters.AddWithValue("@TicketTitle", TicketTitle.Text);
             com.Parameters.AddWithValue("@TicketDetails", TicketDetails.Text);
             com.Parameters.AddWithValue("@SystemID", SystemID.Text);
             com.Parameters.AddWithValue("@UrgencyID", UrgencyID.Text);
+            com.Parameters.AddWithValue("@TicketDate", Session["Date"].ToString());
 
 
             com.ExecuteNonQuery();

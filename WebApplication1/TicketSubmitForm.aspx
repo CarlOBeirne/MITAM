@@ -47,6 +47,12 @@
                 </td>
             </tr>
             <tr>
+                <td style="width: 426px; height: 45px;">Date ticket was logged</td>
+                <td style="height: 45px">
+                    <asp:Label ID="TicketDate" runat="server"></asp:Label>
+                </td>
+            </tr>
+            <tr>
                 <td style="width: 426px">
                     <asp:Button ID="SubmitTicket" runat="server" OnClick="SubmitTicket_Click" Text="Submit" />
                 </td>

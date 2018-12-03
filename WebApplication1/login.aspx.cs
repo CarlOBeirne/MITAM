@@ -37,6 +37,7 @@ namespace WebApplication1
                 {
                     Session["New"] = Email.Text;
                     Session["User"] = userGuid;
+                    Session["Date"] = DateTime.Now.ToString();
                     Response.Write("Password is correct");
                     Response.Redirect("TicketSubmitForm.aspx");
                 }
