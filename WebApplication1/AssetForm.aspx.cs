@@ -31,7 +31,7 @@ namespace WebApplication1
 
             com.ExecuteNonQuery();
 
-            Response.Redirect("/AssetFrom.aspx");
+            Response.Redirect("AssetForm.aspx");
 
             conn.Close();
         }
