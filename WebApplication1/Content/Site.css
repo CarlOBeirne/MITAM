@@ -48,5 +48,30 @@ input[type="select"] {
         display: table;
         clear: both;
     }
-   
+ 
+}
+
+
+div.static {
+    position: static;
+    border: 3px solid #73AD21;
+}
+.chart1{
+    margin-left: 50%;
+    
+}
+.tHead{
+    width: 100%;
+}
+.TicketHeader {
+    text-align: center;
+
+}
+
+
+/* Ticket View */
+.TicketViewHead {
+    
+    border: 10px solid black;
+    color:red;
 }

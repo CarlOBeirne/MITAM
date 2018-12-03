@@ -1,11 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="TicketSubmitForm.aspx.cs" Inherits="WebApplication1.TicketSubmitForm" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div style="width:auto; height:auto;">
-        <link rel="stylesheet" href="content/site.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="content/Site.css" type="text/css" media="screen" />
         <table class="nav-justified">
-            <header> 
-                   <h1>Sumbit a Ticket</h1>
-            </header>
+         <tr class="tHead">
+            <th> 
+                <h1 class="TicketHeader">Sumbit a Ticket</h1>
+            </th>
+        </tr>
             <tr>
                 <td style="width: 42px">Your user id</td>
                 <td>
@@ -44,6 +46,12 @@
                     <asp:DropDownList ID="UrgencyID" runat="server" DataSourceID="UrgencyLevel" DataTextField="UrgencyLevel" DataValueField="UrgencyID">
                     </asp:DropDownList>
                     <asp:SqlDataSource ID="UrgencyLevel" runat="server" ConnectionString="<%$ ConnectionStrings:ProperConnection %>" SelectCommand="SELECT [UrgencyLevel], [UrgencyID] FROM [Urgency]"></asp:SqlDataSource>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 426px; height: 45px;">Date ticket was logged</td>
+                <td style="height: 45px">
+                    <asp:Label ID="TicketDate" runat="server"></asp:Label>
                 </td>
             </tr>
             <tr>
