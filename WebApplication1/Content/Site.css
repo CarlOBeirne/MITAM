@@ -71,5 +71,7 @@ div.static {
 
 /* Ticket View */
 .TicketViewHead {
-    text-align: center;
+    
+    border: 10px solid black;
+    color:red;
 }
