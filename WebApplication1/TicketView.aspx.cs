@@ -18,5 +18,10 @@ namespace WebApplication1
         {
 
         }
+
+        protected void XmlGridView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
