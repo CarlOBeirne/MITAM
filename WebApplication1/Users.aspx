@@ -29,11 +29,11 @@
               
 
                 <Columns>
-                    <asp:BoundField DataField="UserID" HeaderText="UserID" SortExpression="UserID" />
-                    <asp:BoundField DataField="FirstName" HeaderText="FirstName" SortExpression="FirstName" />
-                    <asp:BoundField DataField="LastName" HeaderText="LastName" SortExpression="LastName" />
-                    <asp:BoundField DataField="JobTitle" HeaderText="JobTitle" SortExpression="JobTitle" />
-                    <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
+                    <asp:BoundField DataField="ID" HeaderText="ID" SortExpression="ID" />
+                    <asp:BoundField DataField="First Name" HeaderText="First Name" SortExpression="First Name" />
+                    <asp:BoundField DataField="Last Name" HeaderText="Last Name" SortExpression="Last Name" />
+                    <asp:BoundField DataField="Job Title" HeaderText="Job Title" SortExpression="Job Title" />
+                    <asp:BoundField DataField="Email Address" HeaderText="Email Address" SortExpression="Email Address" />
 
 
                 </Columns>
@@ -50,7 +50,13 @@
                 <SortedDescendingHeaderStyle BackColor="#000065" />
             </asp:GridView>
 
-            <asp:SqlDataSource ID="ProperConnection" runat="server" ConnectionString="<%$ ConnectionStrings:ProperConnection %>" SelectCommand="SELECT [UserID], [FirstName], [LastName], [JobTitle], [Email] FROM [Users]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="ProperConnection" runat="server" ConnectionString="<%$ ConnectionStrings:ProperConnection %>" SelectCommand="SELECT
+	UserID AS &quot;ID&quot;,
+	FirstName AS &quot;First Name&quot;,
+	LastName AS &quot;Last Name&quot;,
+	JobTitle AS &quot;Job Title&quot;,
+	Email AS &quot;Email Address&quot;
+FROM Users;"></asp:SqlDataSource>
 
         </div>
             
