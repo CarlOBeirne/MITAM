@@ -20,17 +20,18 @@ namespace WebApplication1
         {
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ProperConnection"].ConnectionString);
             conn.Open();
-            string insertQuery = "insert into Assets (AssetID, UserID, AssetTitle, AssetNotes, AssetPurchaseDate, AssetTypeID, AssetSN) values (@AssetID, @UserID, @AssetTitle, @AssetNotes, @PurchaseDate, @AssetType, @AssetSN)";
+            string insertQuery = "insert into Assets (UserID, AssetTitle, AssetNotes, AssetPurchaseDate, AssetTypeID, AssetSN) values (@UserID, @AssetTitle, @AssetNotes, @PurchaseDate, @AssetType, @AssetSN)";
             SqlCommand com = new SqlCommand(insertQuery, conn);
-           // com.Parameters.AddWithValue("@UserID", newGUID.ToString());
-            com.Parameters.AddWithValue("@UserID", Session["User"].ToString());
+            com.Parameters.AddWithValue("@UserID", UserID.SelectedItem.Text);
             com.Parameters.AddWithValue("@AssetTitle", AssetTitle.Text);
             com.Parameters.AddWithValue("@AssetNotes", AssetNotes.Text);
             com.Parameters.AddWithValue("@PurchaseDate", PurchaseDate.Text);
-            com.Parameters.AddWithValue("@AssetType", AssetType.Text);
+            com.Parameters.AddWithValue("@AssetType", AssetTypeID.SelectedItem.Text);
             com.Parameters.AddWithValue("@AssetSN", AssetSN.Text);
 
             com.ExecuteNonQuery();
+
+            Response.Redirect("AssetForm.aspx");
 
             conn.Close();
         }
