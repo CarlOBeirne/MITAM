@@ -27,6 +27,9 @@ INNER JOIN System s ON s.SystemID = t.SystemID;"></asp:SqlDataSource>
             </asp:GridView>
 
             <br />
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
+
+            <br />
 
         </div>  
     

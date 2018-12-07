@@ -229,6 +229,7 @@
     <Content Include="Site.Master" />
     <Content Include="TicketSubmitForm.aspx" />
     <Content Include="TicketView.aspx" />
+    <Content Include="UpdateTickets.aspx" />
     <Content Include="UserLogged.aspx" />
     <Content Include="Users.aspx" />
     <Content Include="ViewSwitcher.ascx" />
@@ -428,6 +429,13 @@
     </Compile>
     <Compile Include="TicketView.aspx.designer.cs">
       <DependentUpon>TicketView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateTickets.aspx.cs">
+      <DependentUpon>UpdateTickets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateTickets.aspx.designer.cs">
+      <DependentUpon>UpdateTickets.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserLogged.aspx.cs">
       <DependentUpon>UserLogged.aspx</DependentUpon>
