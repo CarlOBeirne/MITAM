@@ -32,11 +32,12 @@ input[type="select"] {
     .jumbotron {
         margin-top: 20px;
     }
+
     .body-content {
         padding: 0;
     }
 
-  /* Create three equal columns that floats next to each other */
+    /* Create three equal columns that floats next to each other */
     .column {
         float: left;
         width: 33.33%;
@@ -48,7 +49,6 @@ input[type="select"] {
         display: table;
         clear: both;
     }
- 
 }
 
 
@@ -68,22 +68,31 @@ div.static {
 
 }
 
+/* Asset Upload */
+.AssetSectionHead{
+
+    text-align: center;
+    color: blue;
+
+}
+#assetTitle{
+    width: 150px;
+}
+
+.assetForm {
+    border: 2px solid black;
+    margin: 1%;
+    padding: 0 5% 5% 5%;
+}
+.AssetSection {
+    padding: 1%;
+    
+}
 
 /* Ticket View */
 .TicketViewHead {
+    
+    border: 10px solid black;
+    color:blue;
     text-align: center;
-    color:black;
-}
-
-/* Ticket Form */
-.TicketForm{
-    text-align : center;
-}
-
-/* Ticket View */
-#button1 {
-    width: 250px;
-}
-
-
 }

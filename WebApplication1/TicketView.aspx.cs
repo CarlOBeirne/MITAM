@@ -18,5 +18,15 @@ namespace WebApplication1
         {
 
         }
+
+        protected void XmlGridView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("UpdateTickets.aspx");
+        }
     }
 }
