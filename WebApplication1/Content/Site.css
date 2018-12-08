@@ -71,7 +71,19 @@ div.static {
 
 /* Ticket View */
 .TicketViewHead {
-    
-    border: 10px solid black;
-    color:red;
+    text-align: center;
+    color:black;
+}
+
+/* Ticket Form */
+.TicketForm{
+    text-align : center;
+}
+
+/* Ticket View */
+#button1 {
+    width: 250px;
+}
+
+
 }
