@@ -23,9 +23,9 @@
     <div class="clearfix" style="clear: both"></div>
 
 
-        <div class="userList" style="margin-left: 10%">
+        <div class="userList">
             
-            <asp:GridView ID="XmlGridView" runat="server" style="margin-top:5%; width: 90%;" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" ShowFooter="True" DataSourceID="ProperConnection" AutoGenerateColumns="False" AllowPaging="True" AllowSorting="True" OnSelectedIndexChanged="XmlGridView_SelectedIndexChanged2" >
+            <asp:GridView ID="XmlGridView" runat="server" width="100%" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" ShowFooter="True" DataSourceID="ProperConnection" AutoGenerateColumns="False" AllowPaging="True" AllowSorting="True" OnSelectedIndexChanged="XmlGridView_SelectedIndexChanged2" >
             <AlternatingRowStyle BackColor="#DCDCDC" />
               
 
@@ -61,7 +61,7 @@ FROM Users;"></asp:SqlDataSource>
 
         </div>
             
-     <asp:Button ID="Button1" runat="server" Text="Add User" OnClick="Button1_Click" />
+     <asp:Button class="AddRecordBtn" runat="server" Text="Add User" OnClick="Button1_Click" />
 
     </div>
 
