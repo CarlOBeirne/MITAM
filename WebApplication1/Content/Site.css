@@ -86,8 +86,10 @@ div.static {
 }
 .AssetSection {
     padding: 1%;
-    
+    width: 50%;
+
 }
+
 
 /* Ticket View */
 .TicketViewHead {
