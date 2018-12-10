@@ -43,7 +43,7 @@ margin-top:10%;
                     <asp:Series Name="Series1" XValueMember="Expr2" YValueMembers="Expr1"></asp:Series>
                 </Series>
                 <ChartAreas>
-                    <asp:ChartArea Name="ChartArea1"></asp:ChartArea>
+                    <asp:ChartArea Name="ChartArea1"> </asp:ChartArea>
                 </ChartAreas>
             </asp:Chart>
           
