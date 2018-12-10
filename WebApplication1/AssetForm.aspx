@@ -22,35 +22,47 @@ ORDER BY AT.AssetTypeID; "></asp:SqlDataSource>
 
         <div class="AssetSection">
             <asp:Label ID="Label6" runat="server" Text="User"></asp:Label><br />
-            <asp:DropDownList ID="UserID" runat="server" DataSourceID="SqlDataSource1" DataTextField="Name" DataValueField="UID"></asp:DropDownList>
+            <asp:DropDownList ID="User" runat="server" DataSourceID="SqlDataSource1" DataTextField="Name" DataValueField="UID"></asp:DropDownList>
         </div>
         <div class="AssetSection">
-            <asp:Label ID="Label1" runat="server" Text="Asset Title"></asp:Label><br />
-            <asp:TextBox ID="AssetTitle" runat="server"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="AssetTitle" ErrorMessage="Asset Title Required" ForeColor="Red"></asp:RequiredFieldValidator>
+            <asp:Label ID="Label4" runat="server" Text="Asset Type"></asp:Label><br />
+            <asp:DropDownList ID="AssetType" runat="server" DataSourceID="SqlDataSource2" DataTextField="Asset" DataValueField="Asset"></asp:DropDownList>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="AssetType" ErrorMessage="Asset Type Required" ForeColor="Red"></asp:RequiredFieldValidator>
         </div>
         <div class="AssetSection">
-            <asp:Label ID="Label2" runat="server" Text="Asset Notes"></asp:Label><br />
-            <asp:TextBox ID="AssetNotes" runat="server"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="AssetNotes" ErrorMessage="Asset Notes Required" ForeColor="Red"></asp:RequiredFieldValidator>
+            <asp:Label ID="Label1" runat="server" Text="Brand"></asp:Label><br />
+            <asp:TextBox ID="AssetBrand" runat="server"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="AssetBrand" ErrorMessage="Brand Required" ForeColor="Red"></asp:RequiredFieldValidator>
         </div>
         <div class="AssetSection">
+            <asp:Label ID="Label2" runat="server" Text="Model"></asp:Label><br />
+            <asp:TextBox ID="AssetModel" runat="server"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="AssetModel" ErrorMessage="Asset Model Required" ForeColor="Red"></asp:RequiredFieldValidator>
+        </div>
+        <div class="AssetSection2">
             <asp:Label ID="Label3" runat="server" Text="Purchase Dates"></asp:Label><br />
             <asp:TextBox ID="PurchaseDate" runat="server"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="PurchaseDate" ErrorMessage="Asset Purchase Date Required" ForeColor="Red"></asp:RequiredFieldValidator>
         </div>
-        <div class="AssetSection">
-            <asp:Label ID="Label4" runat="server" Text="Asset Type"></asp:Label><br />
-            <asp:DropDownList ID="AssetTypeID" runat="server" DataSourceID="SqlDataSource2" DataTextField="Asset" DataValueField="Asset"></asp:DropDownList>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="AssetTypeID" ErrorMessage="Asset Type Required" ForeColor="Red"></asp:RequiredFieldValidator>
-        </div>
-        <div class="AssetSection">
+        
+        <div class="AssetSection2">
             <asp:Label ID="Label5" runat="server" Text="Serial Number"></asp:Label><br />
             <asp:TextBox ID="AssetSN" runat="server"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="AssetSN" ErrorMessage="Serial Number Required" ForeColor="Red"></asp:RequiredFieldValidator>
         </div>
-
-       <asp:Button ID="AssetBtn" runat="server" Text="Submit Asset" OnClick="Button1_Click" />
+        <div class="AssetSection2">
+            <asp:Label ID="Label7" runat="server" Text="CPU"></asp:Label><br />
+            <asp:TextBox ID="AssetCPU" runat="server"></asp:TextBox>
+        </div>
+        <div class="AssetSection2">
+            <asp:Label ID="Label8" runat="server" Text="RAM"></asp:Label><br />
+            <asp:TextBox ID="AssetRAM" runat="server"></asp:TextBox>
+        </div>
+        <div class="AssetSection2">
+            <asp:Label ID="Label9" runat="server" Text="Storage"></asp:Label><br />
+            <asp:TextBox ID="AssetStorage" runat="server"></asp:TextBox>
+        </div>
+       <asp:Button ID="AssetBtn" runat="server" Text="Record Asset" OnClick="Button1_Click" />
 
     </div>
 

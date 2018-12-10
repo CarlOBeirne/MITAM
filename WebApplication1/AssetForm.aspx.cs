@@ -20,14 +20,18 @@ namespace WebApplication1
         {
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ProperConnection"].ConnectionString);
             conn.Open();
-            string insertQuery = "insert into Assets (UserID, AssetTitle, AssetNotes, AssetPurchaseDate, AssetTypeID, AssetSN) values (@UserID, @AssetTitle, @AssetNotes, @PurchaseDate, @AssetType, @AssetSN)";
+            string insertQuery = "insert into Assets (User, AssetType, Brand, Model, AssetPurchaseDate, AssetSN, CPU, RAM, Storage) values (@User, @AssetType, @Brand, @Model, @PurchaseDate, @AssetSN, @CPU, @RAM, @Storage)";
             SqlCommand com = new SqlCommand(insertQuery, conn);
-            com.Parameters.AddWithValue("@UserID", UserID.SelectedItem.Text);
-            com.Parameters.AddWithValue("@AssetTitle", AssetTitle.Text);
-            com.Parameters.AddWithValue("@AssetNotes", AssetNotes.Text);
+            com.Parameters.AddWithValue("@User", User.SelectedItem.Text);
+            com.Parameters.AddWithValue("@AssetType", AssetType.SelectedItem.Text);
+            com.Parameters.AddWithValue("@Brand", AssetBrand.Text);
+            com.Parameters.AddWithValue("@Model", AssetModel.Text);
             com.Parameters.AddWithValue("@PurchaseDate", PurchaseDate.Text);
-            com.Parameters.AddWithValue("@AssetType", AssetTypeID.SelectedItem.Text);
             com.Parameters.AddWithValue("@AssetSN", AssetSN.Text);
+            com.Parameters.AddWithValue("@CPU",AssetCPU.Text);
+            com.Parameters.AddWithValue("@RAM", AssetRAM.Text);
+            com.Parameters.AddWithValue("@Storage", AssetStorage.Text);
+
 
             com.ExecuteNonQuery();
 
