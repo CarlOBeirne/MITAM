@@ -100,9 +100,9 @@ div.static {
 }
 /*User View */
 
-.Button1 {
-    position: absolute;
-    transition: .5s ease;
-    top: 50%;
-    left: 50%;
+.AddRecordBtn {
+    margin-left: 45%;
+    padding:10px 20px 10px 20px;
+    border-radius:5px;
+    font-size:16px;
 }
