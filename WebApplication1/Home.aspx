@@ -1,7 +1,7 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebApplication1._Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="WebApplication1.Home" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-<style>
+    <style>
 
 .Text3{
 float:right;
@@ -20,7 +20,7 @@ margin-top:10%;
            <p class="Text3">
                This pie chart represents the proportion of the different assets to the total assets going through the system
                 </p>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ProperConnection %>" SelectCommand="SELECT AssetType.AssetType AS Expr1, COUNT(Assets.AssetTypeID) AS Expr2 FROM AssetType INNER JOIN Assets ON AssetType.AssetTypeID = Assets.AssetTypeID GROUP BY AssetType.AssetType"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ProperConnection %>" SelectCommand="SELECT AssetType.AssetType AS Expr1, COUNT(Assets.AssetID) AS Expr2 FROM AssetType INNER JOIN Assets ON AssetType.AssetType = Assets.AssetType GROUP BY AssetType.AssetType"></asp:SqlDataSource>
             <asp:Chart ID="Chart1" runat="server" DataSourceID="SqlDataSource1" Width="410px">
                 <Series>
                     <asp:Series BorderDashStyle="DashDotDot" Color="Pink" Name="Asset" XValueMember="Expr1" YValueMembers="Expr2" ChartType="Pie">
@@ -38,7 +38,7 @@ margin-top:10%;
                      This histogram displays the amount of tickets produced by each user. 
                 </p>
             <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ProperConnection %>" SelectCommand="SELECT COUNT(Tickets.TicketID) AS Expr1, Users.FirstName + ' ' + Users.LastName AS Expr2 FROM Users CROSS JOIN Tickets INNER JOIN Users AS Users_1 ON Tickets.UserID = Users.UserID GROUP BY Users.FirstName, Users.LastName"></asp:SqlDataSource>
-            <asp:Chart ID="Chart2" runat="server" DataSourceID="SqlDataSource2">
+            <asp:Chart ID="Chart2" runat="server" DataSourceID="SqlDataSource2" Width="294px">
                 <Series>
                     <asp:Series Name="Series1" XValueMember="Expr2" YValueMembers="Expr1"></asp:Series>
                 </Series>
@@ -78,5 +78,8 @@ margin-top:10%;
          </asp:Chart>
 
     </div>
+
+
+
 
 </asp:Content>
