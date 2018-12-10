@@ -195,7 +195,6 @@
     <Content Include="Images\Users.png" />
     <Content Include="login.aspx" />
     <Content Include="registration.aspx" />
-    <Content Include="TicketForm.aspx" />
     <None Include="Properties\PublishProfiles\MajorITAssetManagement - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -457,13 +456,6 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="TicketForm.aspx.cs">
-      <DependentUpon>TicketForm.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TicketForm.aspx.designer.cs">
-      <DependentUpon>TicketForm.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -52,7 +52,7 @@
                 
         
         <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
-        <HeaderStyle BackColor="#555555" Font-Bold="True" ForeColor="White" HorizontalAlign="Center" />
+        <HeaderStyle CssClass="GridView" BackColor="#555555" Font-Bold="True" ForeColor="White" HorizontalAlign="Center" />
         <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
         <RowStyle CssClass="GridView" BackColor="#EEEEEE" ForeColor="Black" />
         <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
@@ -63,7 +63,7 @@
 
     </asp:GridView>
     
-    <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
+    <asp:Button Class="AddRecordBtn" runat="server" Text="Button" OnClick="Button1_Click" />
 
 
 </asp:Content>
