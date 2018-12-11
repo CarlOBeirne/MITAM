@@ -10,7 +10,7 @@
 namespace WebApplication1 {
     
     
-    public partial class AssetForm {
+    public partial class Test {
         
         /// <summary>
         /// SqlDataSource1 control.

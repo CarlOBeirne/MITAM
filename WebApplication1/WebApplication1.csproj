@@ -228,6 +228,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="Test.aspx" />
     <Content Include="TicketSubmitForm.aspx" />
     <Content Include="TicketView.aspx" />
     <Content Include="UpdateTickets.aspx" />
@@ -424,6 +425,13 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TicketSubmitForm.aspx.cs">
       <DependentUpon>TicketSubmitForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

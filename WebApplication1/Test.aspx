@@ -1,6 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AssetForm.aspx.cs" Inherits="WebApplication1.AssetForm" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Test.aspx.cs" Inherits="WebApplication1.Test" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-<link rel="stylesheet" href="content/Site.css" type="text/css" media="screen" />
 
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ProperConnection %>" SelectCommand="SELECT U.UserID AS UID, CONCAT(U.FirstName, ' ', U.LastName) AS Name
 FROM Users AS A
@@ -62,7 +61,6 @@ ORDER BY AT.AssetTypeID; "></asp:SqlDataSource>
             <asp:Label ID="Label9" runat="server" Text="Storage"></asp:Label><br />
             <asp:TextBox ID="AssetStorage" runat="server"></asp:TextBox>
         </div>
-       <asp:Button Class="AddRecordBtn" runat="server" Text="Record Asset" OnClick="Button1_Click" />
 
     </div>
 
