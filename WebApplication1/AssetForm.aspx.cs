@@ -20,9 +20,9 @@ namespace WebApplication1
         {
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ProperConnection"].ConnectionString);
             conn.Open();
-            string insertQuery = "insert into Assets (User, AssetType, Brand, Model, AssetPurchaseDate, AssetSN, CPU, RAM, Storage) values (@User, @AssetType, @Brand, @Model, @PurchaseDate, @AssetSN, @CPU, @RAM, @Storage)";
+            string insertQuery = "insert into Assets (UserID, AssetType, Brand, Model, AssetPurchaseDate, AssetSN, CPU, RAM, Storage) values (@User, @AssetType, @Brand, @Model, @PurchaseDate, @AssetSN, @CPU, @RAM, @Storage)";
             SqlCommand com = new SqlCommand(insertQuery, conn);
-            com.Parameters.AddWithValue("@User", User.SelectedItem.Text);
+            com.Parameters.AddWithValue("@User", UserID.SelectedItem.Text);
             com.Parameters.AddWithValue("@AssetType", AssetType.SelectedItem.Text);
             com.Parameters.AddWithValue("@Brand", AssetBrand.Text);
             com.Parameters.AddWithValue("@Model", AssetModel.Text);
@@ -39,5 +39,6 @@ namespace WebApplication1
 
             conn.Close();
         }
+
     }
 }

@@ -17,9 +17,7 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
 
-            
         }
 
         void Get_Xml()
@@ -67,16 +65,6 @@ namespace WebApplication1
         protected void Button1_Click(object sender, EventArgs e)
         {
             Response.Redirect("registration.aspx");
-        }
-
-        protected void XmlGridView_SelectedIndexChanged1(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void XmlGridView_SelectedIndexChanged2(object sender, EventArgs e)
-        {
-
         }
     }
 }
