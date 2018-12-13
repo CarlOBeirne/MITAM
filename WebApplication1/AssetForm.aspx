@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AssetForm.aspx.cs" Inherits="WebApplication1.AssetForm" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <link rel="stylesheet" href="content/Site.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="content/style1.css" type="text/css" media="screen" />
 
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ProperConnection %>" SelectCommand="SELECT UserID, CONCAT(FirstName, ' ', LastName) AS Name FROM Users"></asp:SqlDataSource>
 
@@ -13,20 +13,20 @@ ORDER BY AT.AssetTypeID; "></asp:SqlDataSource>
 
     <div class="assetForm">
         <div class="AssetSectionHead">
-            <h1 class="AssetHeading">Asset Upload Form</h1>
+            <h1 class="headerH1">ASSET UPLOAD FORM</h1>
         </div>
 
         <table style="width: 100%; text-align: right;">
             <tr>
                 <td>
-                    <asp:Label ID="Label6" runat="server" Text="User"></asp:Label></td>
+                    <strong>USER</strong></td>
                 <td>
                     <asp:DropDownList ID="UserID" runat="server" DataSourceID="SqlDataSource1" DataTextField="Name" DataValueField="UserID"></asp:DropDownList>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <asp:Label ID="Label4" runat="server" Text="Asset Type"></asp:Label></td>
+                    <strong>ASSET TYPE</strong></td>
                 <td>
                     <asp:DropDownList ID="AssetType" runat="server" DataSourceID="SqlDataSource2" DataTextField="Asset" DataValueField="Asset"></asp:DropDownList><br />
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="AssetType" ErrorMessage="Asset Type Required" ForeColor="Red"></asp:RequiredFieldValidator>
@@ -35,7 +35,7 @@ ORDER BY AT.AssetTypeID; "></asp:SqlDataSource>
             </tr>
             <tr>
                 <td>
-                    <asp:Label ID="Label1" runat="server" Text="Brand"></asp:Label></td>
+                    <strong>BRAND</strong></td>
                 <td>
                     <asp:TextBox ID="AssetBrand" runat="server"></asp:TextBox>
                     <br />
@@ -44,7 +44,7 @@ ORDER BY AT.AssetTypeID; "></asp:SqlDataSource>
             </tr>
             <tr>
                 <td>
-                    <asp:Label ID="Label2" runat="server" Text="Model"></asp:Label></td>
+                    <strong>MODEL</strong></td>
                 <td>
                     <asp:TextBox ID="AssetModel" runat="server"></asp:TextBox>
                     <br />
@@ -53,7 +53,7 @@ ORDER BY AT.AssetTypeID; "></asp:SqlDataSource>
             </tr>
             <tr>
                 <td>
-                <asp:Label ID="Label3" runat="server" Text="Purchase Dates"></asp:Label></td>
+                    <strong>PURCHASE DATES</strong></td>
                 <td>
                     <asp:TextBox ID="PurchaseDate" runat="server"></asp:TextBox>
 
@@ -64,7 +64,7 @@ ORDER BY AT.AssetTypeID; "></asp:SqlDataSource>
             </tr>
             <tr>
                 <td>
-                    <asp:Label ID="Label5" runat="server" Text="Serial Number"></asp:Label></td>
+                    <strong>SERIAL</strong> <strong>NUMBER</strong></td>
                 <td>
                     <asp:TextBox ID="AssetSN" runat="server"></asp:TextBox>
                     <br />
@@ -73,7 +73,8 @@ ORDER BY AT.AssetTypeID; "></asp:SqlDataSource>
             </tr>
             <tr>
                 <td>
-                    <asp:Label ID="Label7" runat="server" Text="CPU"></asp:Label></td>
+                    <strong>
+                    <asp:Label ID="Label7" runat="server" Text="CPU"></asp:Label></strong></td>
                 <td>
                     <asp:TextBox ID="AssetCPU" runat="server"></asp:TextBox>
                     <br />
@@ -82,7 +83,8 @@ ORDER BY AT.AssetTypeID; "></asp:SqlDataSource>
             </tr>
             <tr>
                 <td>
-                    <asp:Label ID="Label8" runat="server" Text="RAM"></asp:Label></td>
+                    <strong>
+                    <asp:Label ID="Label8" runat="server" Text="RAM"></asp:Label></strong></td>
                 <td>
                     <asp:TextBox ID="AssetRAM" runat="server"></asp:TextBox>
                     <br />
@@ -91,7 +93,7 @@ ORDER BY AT.AssetTypeID; "></asp:SqlDataSource>
             </tr>
             <tr>
                 <td>
-                    <asp:Label ID="Label9" runat="server" Text="Storage"></asp:Label></td>
+                    <strong>STORAGE</strong></td>
                 <td>
                     <asp:TextBox ID="AssetStorage" runat="server"></asp:TextBox>
                     <br />
@@ -100,7 +102,7 @@ ORDER BY AT.AssetTypeID; "></asp:SqlDataSource>
             </tr>
         </table>
 
-        <asp:Button Class="AddRecordBtn" runat="server" Text="Record Asset" OnClick="Button1_Click" />
+        <asp:Button Class="btn1" runat="server" Text="Record Asset" OnClick="Button1_Click" />
 
     </div>
 
