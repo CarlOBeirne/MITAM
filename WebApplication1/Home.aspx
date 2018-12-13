@@ -1,4 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="WebApplication1.Home" %>
+<%@ Register assembly="DevExpress.XtraCharts.v18.2.Web, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.XtraCharts.Web" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.XtraCharts.v18.2.Web, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.XtraCharts.Web.Designer" tagprefix="dxchartdesigner" %>
+<%@ Register assembly="DevExpress.XtraCharts.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.XtraCharts" tagprefix="dx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
  
@@ -8,6 +11,8 @@
         <p>
 
         </p>
+            <asp:SqlDataSource ID="SqlDataSource5" runat="server"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:ProperConnection %>" SelectCommand="SELECT AssetType.AssetType, COUNT(Assets.AssetID) AS Number FROM AssetType INNER JOIN Assets ON AssetType.AssetType = Assets.AssetType GROUP BY AssetType.AssetType"></asp:SqlDataSource>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ProperConnection %>" SelectCommand="SELECT AssetType.AssetType, COUNT(Assets.AssetID) AS Number FROM AssetType INNER JOIN Assets ON AssetType.AssetType = Assets.AssetType GROUP BY AssetType.AssetType"></asp:SqlDataSource>
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
             <Columns>
@@ -43,11 +48,12 @@
             </asp:Chart>
           
         </div>
+                
           
      <div class="jumbotron" >
          <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ProperConnection %>" SelectCommand="SELECT TicketStatusDim.TicketStatus AS [Ticket Status], COUNT(TicketStatusDim_1.TicketStatusID) AS Amount FROM TicketStatusDim INNER JOIN TicketStatusDim AS TicketStatusDim_1 ON TicketStatusDim.TicketStatusID = TicketStatusDim_1.TicketStatusID GROUP BY TicketStatusDim.TicketStatus"></asp:SqlDataSource>
 
-            <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource3">
+            <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource3" OnSelectedIndexChanged="GridView2_SelectedIndexChanged">
                  <Columns>
                  <asp:BoundField DataField="Ticket Status" HeaderText="Ticket Status" SortExpression="Ticket Status" />
                  <asp:BoundField DataField="Amount" HeaderText="Amount" ReadOnly="True" SortExpression="Amount" />
