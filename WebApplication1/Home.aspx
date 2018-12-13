@@ -17,9 +17,8 @@ margin-top:10%;
 <h1>Major IT Asset Management</h1>
     
     <div class="jumbotron">
-           <p class="Text3">
-               This pie chart represents the proportion of the different assets to the total assets going through the system
-                </p>
+        <asp:SqlDataSource ID="SqlDataSource5" runat="server"></asp:SqlDataSource>
+        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ProperConnection %>" SelectCommand="SELECT AssetType.AssetType AS Expr1, COUNT(Assets.AssetID) AS Expr2 FROM AssetType INNER JOIN Assets ON AssetType.AssetType = Assets.AssetType GROUP BY AssetType.AssetType"></asp:SqlDataSource>
             <asp:Chart ID="Chart1" runat="server" DataSourceID="SqlDataSource1" Width="410px">
                 <Series>
@@ -52,10 +51,15 @@ margin-top:10%;
                 <p class="Text3">
                     This line graph visualises the total amount of tickets over the last few operational days.
                 </p>
-        <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ProperConnection %>" SelectCommand="SELECT COUNT(Tickets.TicketID) AS Expr1, AssetHistory.Date FROM AssetHistory CROSS JOIN Tickets GROUP BY AssetHistory.Date"></asp:SqlDataSource>
-        <asp:Chart ID="Chart3" runat="server" DataSourceID="SqlDataSource3">
+        <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ProperConnection %>" SelectCommand="SELECT COUNT(Tickets.TicketID) AS Expr1, AssetHistory.Date 
+FROM AssetHistory 
+CROSS JOIN Tickets 
+WHERE AssetHistory.Date BETWEEN GETDATE() - 7 AND GETDATE()
+GROUP BY AssetHistory.Date
+ "></asp:SqlDataSource>
+        <asp:Chart ID="Chart3" runat="server" DataSourceID="SqlDataSource3" OnLoad="Chart3_Load" Width="267px">
             <Series>
-                <asp:Series Name="Series1" ChartType="Point" XValueMember="Date" YValueMembers="Expr1"></asp:Series>
+                <asp:Series Name="Series1" ChartType="Point" XValueMember="Date" YValueMembers="Expr1" ChartArea="ChartArea1"></asp:Series>
             </Series>
             <ChartAreas>
                 <asp:ChartArea Name="ChartArea1"></asp:ChartArea>

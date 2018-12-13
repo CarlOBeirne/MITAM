@@ -13,5 +13,10 @@ namespace WebApplication1
         {
 
         }
+
+        protected void Chart3_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
