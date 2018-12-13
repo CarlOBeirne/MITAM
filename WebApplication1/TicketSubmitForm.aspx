@@ -1,7 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="TicketSubmitForm.aspx.cs" Inherits="WebApplication1.TicketSubmitForm" %>
+﻿<%@ Page Title="Submit Ticket" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="TicketSubmitForm.aspx.cs" Inherits="WebApplication1.TicketSubmitForm" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link rel="stylesheet" href="content/style1.css" type="text/css" media="screen" />
     <div style="width:auto; height:auto;">
+     <div class="formBorder">
         <h1 class="headerH1">SUBMIT A TICKET</h1>
         <table class="nav-justified">
             <tr>
@@ -52,6 +53,8 @@
             </tr>
             </table>
     <asp:Button class="btn1" ID="SubmitTicket" runat="server" OnClick="SubmitTicket_Click" Text="SUBMIT TICKET" />
+         <br />
+         <asp:Label ID="TicketSuccess" runat="server" ForeColor="#33CC33"></asp:Label>
     </div>
-
+        </div>
 </asp:Content>

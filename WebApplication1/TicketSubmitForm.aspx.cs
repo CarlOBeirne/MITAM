@@ -20,7 +20,7 @@ namespace WebApplication1
                 TicketDate.Text += Session["Date"].ToString();
             }
             else
-                Response.Redirect("login.aspx");
+                Response.Redirect("Default.aspx");
         }
         protected void SubmitTicket_Click(object sender, EventArgs e)
         {
@@ -38,7 +38,9 @@ namespace WebApplication1
 
             com.ExecuteNonQuery();
 
-            Response.Redirect("TicketSubmitForm.aspx");
+            //Response.Redirect("TicketSubmitForm.aspx");
+            TicketSuccess.Text = "Ticket submitted successfully, we will be in touch shortly!";
+
             conn.Close();
         }
     }

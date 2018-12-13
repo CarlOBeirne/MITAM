@@ -81,7 +81,7 @@ div.static {
     width: 150px;
 }
 
-.assetForm {
+.formBorder {
     border: 2px solid black;
     margin: 1%;
     padding: 0 5% 5% 5%;
@@ -108,6 +108,7 @@ div.static {
     font-size: 16px;
 }
 
+/*Forms*/
 .headerH1 {
     text-align: center;
     color: black;
@@ -124,9 +125,9 @@ table, th, td {
     padding: 5px;
 }
 
-.btn1{
+.btn1 {
     border: 1px solid black;
-    background-color: grey;
+    background-color: #DFD8D8;
     text-align: center;
     width: 50%;
     height: 35px;
