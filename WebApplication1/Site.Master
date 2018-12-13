@@ -52,9 +52,10 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="Home.aspx">Home</a></li>
-                        <li><a runat="server" href="TicketSubmitForm.aspx">Submit a Ticket</a></li>
-                        <li><a runat="server" href="TicketView.aspx">View Tickets</a></li>
-                        <li><a runat="server" href="Users.aspx">Users</a></li>
+                        <li><a runat="server" href="TicketSubmitForm.aspx">New Ticket</a></li>
+                        <li><a runat="server" href="TicketView.aspx">Open Tickets</a></li>
+                        <li><a runat="server" href="Users.aspx">View Users</a></li>
+                        <li><a runat="server" href="Assets.aspx">View Assets</a></li>
                     </ul>
                 </div>
             </div>
@@ -64,7 +65,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                <p>&copy; <%: DateTime.Now.Year %> - Major IT Asset Management.</p>
             </footer>
         </div>
     </form>
