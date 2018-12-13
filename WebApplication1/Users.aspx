@@ -1,9 +1,10 @@
 ﻿<%@ Page Title="Users" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Users.aspx.cs" Inherits="WebApplication1.Users" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
+    <link rel="stylesheet" href="content/style1.css" type="text/css" media="screen" />
+     <div class="formBorder">
     <div class ="row">
 
-        <div class="header" style="text-align:center;">
+        <div class="headerH1" style="text-align:center;">
 
             <h1 >Users</h1>
         
@@ -73,11 +74,12 @@
                 <SortedDescendingCellStyle BackColor="#CAC9C9" />
                 <SortedDescendingHeaderStyle BackColor="#000065" />
             </asp:GridView>
-            <asp:Button class="AddRecordBtn" runat="server" Text="Add User" OnClick="Button1_Click" />
+            <asp:Button class="btn1" runat="server" Text="Add User" OnClick="Button1_Click" />
         </div>
             
 
 
     </div>
+         </div>
 
 </asp:Content>
