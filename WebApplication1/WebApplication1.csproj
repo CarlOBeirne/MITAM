@@ -193,6 +193,7 @@
     <Content Include="Images\Users.png" />
     <Content Include="registration.aspx" />
     <None Include="Properties\PublishProfiles\MajorITAssetManagement - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\mitam - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
