@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="UpdateTickets.aspx.cs" Inherits="WebApplication1.UpdateTickets" %>
+﻿<%@ Page Title="Update Ticket" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="UpdateTickets.aspx.cs" Inherits="WebApplication1.UpdateTickets" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <table class="nav-justified">
         <tr>
