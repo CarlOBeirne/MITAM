@@ -7,7 +7,7 @@
         
     </div>
 
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ProperConnection %>" DeleteCommand="DELETE FROM [Assets] WHERE [AssetID] = @AssetID" InsertCommand="INSERT INTO [Assets] ([AssetType], [Brand], [Model], [AssetPurchaseDate], [AssetSN], [CPU], [RAM], [Storage], [User]) VALUES (@AssetType, @Brand, @Model, @AssetPurchaseDate, @AssetSN, @CPU, @RAM, @Storage, @User)" SelectCommand="SELECT [AssetID], [AssetType], [Brand], [Model], [AssetPurchaseDate], [AssetSN], [CPU], [RAM], [Storage], [User] FROM [Assets]" UpdateCommand="UPDATE [Assets] SET [AssetType] = @AssetType, [Brand] = @Brand, [Model] = @Model, [AssetPurchaseDate] = @AssetPurchaseDate, [AssetSN] = @AssetSN, [CPU] = @CPU, [RAM] = @RAM, [Storage] = @Storage, [User] = @User WHERE [AssetID] = @AssetID">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ProperConnection %>" DeleteCommand="DELETE FROM [Assets] WHERE [AssetID] = @AssetID" InsertCommand="INSERT INTO [Assets] ([AssetType], [Brand], [Model], [AssetPurchaseDate], [AssetSN], [CPU], [RAM], [Storage], [UserID]) VALUES (@AssetType, @Brand, @Model, @AssetPurchaseDate, @AssetSN, @CPU, @RAM, @Storage, @UserID)" SelectCommand="SELECT [AssetID], [AssetType], [Brand], [Model], [AssetPurchaseDate], [AssetSN], [CPU], [RAM], [Storage], [UserID] FROM [Assets]" UpdateCommand="UPDATE [Assets] SET [AssetType] = @AssetType, [Brand] = @Brand, [Model] = @Model, [AssetPurchaseDate] = @AssetPurchaseDate, [AssetSN] = @AssetSN, [CPU] = @CPU, [RAM] = @RAM, [Storage] = @Storage, [UserID] = @UserID WHERE [AssetID] = @AssetID">
         <DeleteParameters>
             <asp:Parameter Name="AssetID" Type="Int32" />
         </DeleteParameters>
@@ -20,7 +20,7 @@
             <asp:Parameter Name="CPU" Type="String" />
             <asp:Parameter Name="RAM" Type="String" />
             <asp:Parameter Name="Storage" Type="String" />
-            <asp:Parameter Name="User" Type="String" />
+            <asp:Parameter Name="UserID" Type="String" />
         </InsertParameters>
         <UpdateParameters>
             <asp:Parameter Name="AssetType" Type="String" />
@@ -31,7 +31,7 @@
             <asp:Parameter Name="CPU" Type="String" />
             <asp:Parameter Name="RAM" Type="String" />
             <asp:Parameter Name="Storage" Type="String" />
-            <asp:Parameter Name="User" Type="String" />
+            <asp:Parameter Name="UserID" Type="String" />
             <asp:Parameter Name="AssetID" Type="Int32" />
         </UpdateParameters>
     </asp:SqlDataSource>
@@ -47,7 +47,7 @@
             <asp:BoundField DataField="CPU" HeaderText="CPU" SortExpression="CPU" />
             <asp:BoundField DataField="RAM" HeaderText="RAM" SortExpression="RAM" />
             <asp:BoundField DataField="Storage" HeaderText="Storage" SortExpression="Storage" />
-            <asp:BoundField DataField="User" HeaderText="User" SortExpression="User" />
+            <asp:BoundField DataField="UserID" HeaderText="UserID" SortExpression="UserID" />
         </Columns>
                 
         

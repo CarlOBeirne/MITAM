@@ -20,7 +20,7 @@ namespace WebApplication1
                 TicketDate.Text += Session["Date"].ToString();
             }
             else
-                Response.Redirect("login.aspx");
+                Response.Redirect("Default.aspx");
         }
         protected void SubmitTicket_Click(object sender, EventArgs e)
         {
