@@ -1,9 +1,10 @@
 ﻿<%@ Page Title="Assets" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Assets.aspx.cs" Inherits="WebApplication1.Assets" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-<link rel="stylesheet" href="content/Site.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="content/style1.css" type="text/css" media="screen" />
+    <div class="formBorder">
     <div class="header" style="text-align:center;">
 
-        <h1 >Assets</h1>
+        <h1 class="headerH1" >Assets</h1>
         
     </div>
 
@@ -63,7 +64,7 @@
 
     </asp:GridView>
     
-    <asp:Button Class="AddRecordBtn" runat="server" Text="Button" OnClick="Button1_Click" />
+    <asp:Button Class="btn1" runat="server" Text="ADD A NEW ASSET" OnClick="Button1_Click" />
 
-
+    </div>
 </asp:Content>

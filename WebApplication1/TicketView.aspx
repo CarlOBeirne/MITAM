@@ -1,9 +1,11 @@
 ﻿<%@ Page Title="Tickets" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="TicketView.aspx.cs" Inherits="WebApplication1.TicketView" %>
 <%@ Register assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" namespace="System.Web.UI.DataVisualization.Charting" tagprefix="asp" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <link rel="stylesheet" href="content/Site.css" type="text/css" media="screen" />
+    <div class="formBorder">
+    <link rel="stylesheet" href="content/style1.css" type="text/css" media="screen" />
 
-    <h1 class ="TicketViewHead" >Ticket View </h1>
+
+    <h1 class ="headerH1" >Ticket View </h1>
 
     <asp:SqlDataSource ID="MITAMConnection" runat="server" ConnectionString="<%$ ConnectionStrings:ProperConnection %>" SelectCommand="SELECT
 	TicketID AS &quot;ID&quot;,
@@ -27,11 +29,10 @@ INNER JOIN System s ON s.SystemID = t.SystemID;"></asp:SqlDataSource>
             </asp:GridView>
 
             <br />
-            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Update status of a ticket" />
 
             <br />
 
         </div>  
-    
+    </div>
 
 </asp:Content>
