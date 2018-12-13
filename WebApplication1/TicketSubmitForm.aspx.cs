@@ -38,7 +38,9 @@ namespace WebApplication1
 
             com.ExecuteNonQuery();
 
-            Response.Redirect("TicketSubmitForm.aspx");
+            //Response.Redirect("TicketSubmitForm.aspx");
+            TicketSuccess.Text = "Ticket submitted successfully, we will be in touch shortly!";
+
             conn.Close();
         }
     }

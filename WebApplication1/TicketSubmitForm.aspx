@@ -53,6 +53,8 @@
             </tr>
             </table>
     <asp:Button class="btn1" ID="SubmitTicket" runat="server" OnClick="SubmitTicket_Click" Text="SUBMIT TICKET" />
+         <br />
+         <asp:Label ID="TicketSuccess" runat="server" ForeColor="#33CC33"></asp:Label>
     </div>
         </div>
 </asp:Content>
