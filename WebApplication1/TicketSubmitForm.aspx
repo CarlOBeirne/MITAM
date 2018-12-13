@@ -2,6 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link rel="stylesheet" href="content/style1.css" type="text/css" media="screen" />
     <div style="width:auto; height:auto;">
+     <div class="formBorder">
         <h1 class="headerH1">SUBMIT A TICKET</h1>
         <table class="nav-justified">
             <tr>
@@ -53,5 +54,5 @@
             </table>
     <asp:Button class="btn1" ID="SubmitTicket" runat="server" OnClick="SubmitTicket_Click" Text="SUBMIT TICKET" />
     </div>
-
+        </div>
 </asp:Content>

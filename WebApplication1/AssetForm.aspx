@@ -11,7 +11,7 @@ ON A.AssetTypeID = AT.AssetTypeID
 ORDER BY AT.AssetTypeID; "></asp:SqlDataSource>
 
 
-    <div class="assetForm">
+    <div class="formBorder">
         <div class="AssetSectionHead">
             <h1 class="headerH1">ASSET UPLOAD FORM</h1>
         </div>
@@ -102,7 +102,7 @@ ORDER BY AT.AssetTypeID; "></asp:SqlDataSource>
             </tr>
         </table>
 
-        <asp:Button Class="btn1" runat="server" Text="Record Asset" OnClick="Button1_Click" />
+        <asp:Button Class="btn1" runat="server" Text="RECORD ASSET" OnClick="Button1_Click" />
 
     </div>
 

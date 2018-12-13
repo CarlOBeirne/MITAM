@@ -36,7 +36,7 @@ namespace WebApplication1
 
                 SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ProperConnection"].ConnectionString);
                 conn.Open();
-                string insertQuery = "insert into Users (UserID,FirstName,LastName,JobTitle,Email,PasswordHash,RoleID) values (@UserID ,@FirstName , @LastName , @JobTitle , @Email , @PasswordHash , @RoleID)";
+                string insertQuery = "insert into Users (UserID,FirstName,LastName,JobTitle,Email,PasswordHash) values (@UserID ,@FirstName , @LastName , @JobTitle , @Email , @PasswordHash)";
                 SqlCommand com = new SqlCommand(insertQuery, conn);
                 com.Parameters.AddWithValue("@UserID", newGUID.ToString());
                 com.Parameters.AddWithValue("@FirstName", FirstName.Text);
@@ -44,7 +44,6 @@ namespace WebApplication1
                 com.Parameters.AddWithValue("@JobTitle", JobTitle.Text);
                 com.Parameters.AddWithValue("@Email", Email.Text);
                 com.Parameters.AddWithValue("@PasswordHash", PasswordHash.Text);
-                com.Parameters.AddWithValue("@RoleID", RoleID.SelectedItem.Text);
 
                 com.ExecuteNonQuery();
                 Response.Write("Registration successful");
