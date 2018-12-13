@@ -62,7 +62,7 @@
         <tr>
             <td class="text-right" style="width: 203px">Role</td>
             <td class="text-left" style="width: 199px">
-                <asp:DropDownList ID="RoleID" runat="server" Width="180px" DataSourceID="ConnectionToRolesTable" DataTextField="Role" DataValueField="RoleID">
+                <asp:DropDownList ID="RoleID" runat="server" Width="180px" DataSourceID="ConnectionToRolesTable" DataTextField="RoleID" DataValueField="RoleID">
                     <asp:ListItem>Agent</asp:ListItem>
                     <asp:ListItem>Manager</asp:ListItem>
                 </asp:DropDownList>
