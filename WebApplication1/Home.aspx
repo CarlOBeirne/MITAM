@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="WebApplication1.Home" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
- 
+
 <h1>Major IT Asset Management</h1>
     
     <div class="jumbotron">
@@ -68,3 +68,4 @@
 
 
 </asp:Content>
+
