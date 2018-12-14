@@ -21,14 +21,42 @@ FROM
 INNER JOIN Urgency u ON u.UrgencyID = t.UrgencyID
 INNER JOIN TicketStatusDim ts ON ts.TicketStatusID = t.TicketStatusID
 INNER JOIN Users us ON us.UserID = t.UserID
-INNER JOIN System s ON s.SystemID = t.SystemID;"></asp:SqlDataSource>
+INNER JOIN System s ON s.SystemID = t.SystemID;
+"></asp:SqlDataSource>
     
 <div class="userList" style="margin-left: 10%">
-            <asp:GridView ID="XmlGridView" runat="server" style="margin-top:5%; width: 90%;" ShowFooter="True" DataSourceID="MITAMConnection" AllowPaging="True" AllowSorting="True" OnSelectedIndexChanged="XmlGridView_SelectedIndexChanged" >
+            <asp:GridView ID="XmlGridView" runat="server" style="margin-top:5%; width: 90%;" ShowFooter="True" DataSourceID="MITAMConnection" AllowPaging="True" AllowSorting="True" OnSelectedIndexChanged="XmlGridView_SelectedIndexChanged" AutoGenerateColumns="False" >
+                <Columns>
+                    <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
+                    <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />
+                    <asp:BoundField DataField="Details" HeaderText="Details" SortExpression="Details" />
+                    <asp:BoundField DataField="Urgency" HeaderText="Urgency" SortExpression="Urgency" />
+                    <asp:BoundField DataField="Ticket Status" HeaderText="Ticket Status" SortExpression="Ticket Status" />
+                    <asp:BoundField DataField="Date Logged" HeaderText="Date Logged" SortExpression="Date Logged" />
+                    <asp:BoundField DataField="System Affected" HeaderText="System Affected" SortExpression="System Affected" />
+                    <asp:BoundField DataField="User" HeaderText="User" ReadOnly="True" SortExpression="User" />
+                </Columns>
                 <HeaderStyle BackColor="#555555" Font-Bold="True" ForeColor="White" HorizontalAlign="Center" />
             </asp:GridView>
 
             <br />
+    <h1 class="h1">TICKETS RECEVIED VIA EMAIL</h1>
+    <asp:GridView ID="GridView11" runat="server" style="margin-top:5%; width: 90%;" ShowFooter="True" DataSourceID="Email" AllowPaging="True" AllowSorting="True" OnSelectedIndexChanged="XmlGridView_SelectedIndexChanged" AutoGenerateColumns="False" >
+                <Columns>
+                    <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
+                    <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />
+                    <asp:BoundField DataField="Details" HeaderText="Details" SortExpression="Details" />
+                </Columns>
+                <HeaderStyle BackColor="#555555" Font-Bold="True" ForeColor="White" HorizontalAlign="Center" />
+            </asp:GridView>
+
+            <asp:SqlDataSource ID="Email" runat="server" ConnectionString="<%$ ConnectionStrings:ProperConnection %>" SelectCommand="SELECT
+	TicketID AS &quot;ID&quot;,
+	TicketTitle AS &quot;Title&quot;,
+TicketDetails AS &quot;Details&quot;
+FROM
+	Tickets 
+WHERE SystemID is null"></asp:SqlDataSource>
 
             <br />
 
